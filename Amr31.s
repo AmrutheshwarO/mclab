@@ -1,0 +1,16 @@
+			AREA PROG31, CODE, READONLY
+N						RN 1
+RES					RN 2
+EN					RN 3
+ENTRY
+			MOV N, #5
+			MOV RES, #0
+			MOV EN, #0
+			MOV R4, #0x40000000
+LOOP	ADD EN, EN, #2
+			ADD RES, RES, EN
+			SUBS R1, R1, #1
+			BNE LOOP
+			STR RES, [R4]
+STOP	B STOP
+			END

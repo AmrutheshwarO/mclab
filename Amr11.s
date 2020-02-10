@@ -1,0 +1,7 @@
+			AREA PROG11, CODE, READONLY
+ENTRY
+				MOV R0, #0x78
+				MOV R1, #0x21
+				ADD R3, R1, R0
+STOP		B STOP
+				END

@@ -1,0 +1,10 @@
+			AREA PROG21, CODE, READONLY
+ENTRY
+				MOV R0, #0
+				MOV R1, #0
+BACKK		ADD R0, R0, #1
+				ADD R1, R1, R0
+				CMP R0, #5
+				BNE BACKK
+GO			B GO
+				END
